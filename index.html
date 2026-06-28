@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,26 +17,71 @@
   <meta name="description"
     content="TribleTunes creates high-quality lyric videos, curated playlists, and daily music uploads. Lose yourself in emotional and aesthetic music visuals.">
   <meta name="keywords"
-    content="TribleTunes, lyric videos, music channel, aesthetic lyrics, chill music, emotional songs, youtube music">
+    content="TribleTunes, lyric videos, music channel, aesthetic lyrics, chill music, emotional songs, youtube music, lo-fi lyrics, upcoming artists, music submissions">
   <meta name="author" content="TribleTunes">
-  <link rel="canonical" href="https://tribletunes.com">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://tribletunes.com/">
+
+  <!-- Hreflang Localization -->
+  <link rel="alternate" hreflang="x-default" href="https://tribletunes.com/">
+  <link rel="alternate" hreflang="en" href="https://tribletunes.com/">
+
+  <!-- Geo SEO (Geotagging) -->
+  <meta name="geo.region" content="IN-DL" />
+  <meta name="geo.placename" content="New Delhi" />
+  <meta name="geo.position" content="28.6139;77.2090" />
+  <meta name="ICBM" content="28.6139, 77.2090" />
 
   <!-- Open Graph (Facebook / WhatsApp / Instagram) -->
   <meta property="og:title" content="TribleTunes - Aesthetic Lyrics & Daily Music Uploads">
   <meta property="og:description"
     content="Discover lyrical visuals that touch your heart. Join the TribleTunes music community.">
   <meta property="og:image" content="https://ik.imagekit.io/lbmgfujrk/preview.png">
-  <meta property="og:url" content="https://tribletunes.com">
+  <meta property="og:url" content="https://tribletunes.com/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TribleTunes">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TribleTunes - Daily Lyric Videos & Music">
   <meta name="twitter:description" content="A home for aesthetic lyric visuals, curated music & emotional vibes.">
   <meta name="twitter:image" content="https://ik.imagekit.io/lbmgfujrk/preview.png">
+  <meta name="twitter:site" content="@TribleTunes">
 
-  <!-- Favicon -->
+  <!-- Favicon and Theme Color -->
   <link rel="icon" href="https://ik.imagekit.io/lbmgfujrk/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://ik.imagekit.io/lbmgfujrk/favicon.png">
+  <meta name="theme-color" content="#6366f1">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "TribleTunes",
+    "url": "https://tribletunes.com/",
+    "logo": "https://ik.imagekit.io/lbmgfujrk/favicon.png",
+    "description": "TribleTunes creates high-quality lyric videos, chill playlists, and music submissions for emerging artists.",
+    "genre": ["Lo-Fi", "Chill", "Pop", "Aesthetic", "Acoustic"],
+    "sameAs": [
+      "https://www.youtube.com/@Tribletunes",
+      "https://www.instagram.com/tribletunes"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TribleTunes",
+    "url": "https://tribletunes.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://tribletunes.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
   <!-- Styles & Fonts -->
   <link rel="stylesheet" href="assets/style.css?v=2">
@@ -54,7 +105,7 @@
       </div>
 
       <div class="header-logo">
-        <h1 class="logo">TribleTunes</h1>
+        <h1 class="logo" onclick="window.location.href='/'">TribleTunes</h1>
       </div>
 
       <div id="hamburger">
@@ -187,10 +238,15 @@
       <a href="/dmca/">DMCA</a> |
       <a href="/cookies/">Cookie Policy</a>
     </p>
+    <p style="margin-top: 15px; font-size: clamp(0.75rem, 1.5vw, 0.85rem);">Made with ❤️ for Music Lovers</p>
+  </footer>
 
-    <button id="scrollTop"><ion-icon name="arrow-up-outline"></ion-icon></button>
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollTop" title="Scroll to top">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </button>
 
-    <script src="assets/script.js?v=2"></script>
+  <script src="assets/script.js?v=2"></script>
 </body>
 
 </html>
