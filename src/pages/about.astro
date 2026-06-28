@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About Us - TribleTunes"
+  description="TribleTunes About Us - Learn more about our mission, journey, milestones, and how we support emerging artists with free lyric videos."
+  keywords="about us, mission, music team, TribleTunes background, lyric video creators"
+>
+  <style slot="head">
+    /* STATS HIGHLIGHT BOX */
+    .stats-highlight {
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: clamp(10px, 2vw, 15px);
+      padding: clamp(15px, 3vw, 25px);
+      margin: clamp(15px, 3vh, 25px) 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
+      gap: clamp(15px, 3vw, 25px);
+      margin-top: clamp(15px, 3vh, 20px);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: clamp(12px, 2vh, 18px);
+      background: var(--bg-primary);
+      border-radius: clamp(8px, 1.5vw, 12px);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+      border-color: var(--accent-color);
+    }
+
+    .stat-number {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-color), #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    @media(max-width: 600px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- ABOUT US SECTION -->
+  <section id="about">
+    <h2 class="section-title">About TribleTunes</h2>
+    <h3 class="section-subtitle">Empowering Emerging Artists & Music Lovers</h3>
+    <p class="section-text">
+      TribleTunes helps emerging artists get the recognition they deserve. We support talented creators worldwide and
+      provide a platform for their music to reach a wider audience.
+    </p>
+    <p class="section-text">
+      On YouTube, we produce high-quality lyric videos, bringing music to life visually. Our goal is to expand reach,
+      connect artists with fans, and make every song an experience to remember.
+    </p>
+    <p class="section-text">
+      Whether you are an artist seeking exposure or a music lover exploring new talent, TribleTunes is your gateway to
+      discovering amazing music.
+    </p>
+    <a href="https://www.youtube.com/@Tribletunes" class="cta-btn" target="_blank">Visit Our Channel</a>
+  </section>
+
+  <hr class="fancy-line">
+
+  <!-- OUR JOURNEY SECTION -->
+  <section id="founded-stats">
+    <h2 class="section-title">Our Journey</h2>
+    <h3 class="section-subtitle">From Humble Beginnings to Global Reach</h3>
+    <p class="section-text">
+      Founded in February 2024, TribleTunes empowers emerging artists. In just over a year, we've reached incredible
+      milestones, building a vibrant music community.
+    </p>
+
+    <div class="stats-highlight">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="5000000">0</span>
+          <span class="stat-label">Total Views</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="400">0</span>
+          <span class="stat-label">Lyric Videos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="2024">0</span>
+          <span class="stat-label">Founded</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-text">
+      We continue to grow, connecting talented creators with fans, offering a space where music is celebrated worldwide.
+    </p>
+  </section>
+
+  <hr class="fancy-line">
+
+  <!-- MISSION & VISION SECTION -->
+  <section id="mission-vision">
+    <h2 class="section-title">Our Mission & Vision</h2>
+    <h3 class="section-subtitle">Creating a Community That Celebrates Music</h3>
+    <p class="section-text">
+      Our mission: help artists shine and make music discovery enjoyable. Every artist deserves recognition, every
+      listener a memorable experience.
+    </p>
+    <p class="section-text">
+      TribleTunes aims to expand globally, supporting artists, introducing new features, and fostering a community where
+      music is felt, not just heard.
+    </p>
+    <p class="section-text">
+      We believe in the power of music to connect people across cultures and borders. Through our platform, we're
+      building bridges between artists and audiences, creating lasting memories one song at a time.
+    </p>
+  </section>
+</Layout>

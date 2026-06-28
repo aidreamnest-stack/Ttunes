@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Cookie Policy - TribleTunes"
+  description="TribleTunes Cookie Policy - Learn how we use cookies, how they enhance your experience, and how to manage your cookie preferences."
+  keywords="cookie policy, TribleTunes cookies, tracking preferences, manage cookies"
+>
+  <style slot="head">
+    /* INFO CARD */
+    .info-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: clamp(10px, 2vw, 15px);
+      padding: clamp(20px, 3vw, 30px);
+      margin: clamp(20px, 3vh, 30px) 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+
+    .info-card h3 {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: var(--accent-color);
+      margin-bottom: clamp(12px, 2vh, 15px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-card h3 ion-icon {
+      font-size: clamp(1.3rem, 3vw, 1.5rem);
+    }
+
+    .info-card p,
+    .info-card ul {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: clamp(10px, 2vh, 15px);
+    }
+
+    .info-card ul {
+      padding-left: clamp(20px, 4vw, 30px);
+    }
+
+    .info-card li {
+      margin-bottom: clamp(8px, 1.5vh, 10px);
+    }
+
+    /* FANCY HR LINES */
+    hr.fancy-line {
+      border: 0;
+      height: clamp(2px, 0.3vh, 3px);
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      margin: clamp(30px, 5vh, 50px) auto;
+      border-radius: 5px;
+      max-width: min(600px, 80%);
+      opacity: 0.6;
+    }
+  </style>
+
+  <!-- COOKIE POLICY SECTION -->
+  <section id="cookie-policy">
+    <h2 class="section-title">Cookie Policy</h2>
+    <h3 class="section-subtitle">How We Use Cookies</h3>
+
+    <p class="section-text">
+      This Cookie Policy explains what cookies are, how we use them, the types of cookies we use, the information we
+      collect using cookies, and how that information is used.
+    </p>
+
+    <hr class="fancy-line">
+
+    <div class="info-card">
+      <h3><ion-icon name="information-circle-outline"></ion-icon> What are Cookies?</h3>
+      <p>
+        Cookies are small text files that are used to store small pieces of information. They are stored on your device
+        when the website is loaded on your browser.
+      </p>
+      <p>
+        These cookies help us make the website function properly, make it more secure, provide better user experience,
+        understand how the website performs, and analyze what works and where it needs improvement.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="settings-outline"></ion-icon> How We Use Cookies</h3>
+      <p>
+        As most of the online services, our website uses first-party and third-party cookies for several purposes.
+      </p>
+      <ul>
+        <li><strong>First-party cookies</strong> are mostly necessary for the website to function the right way, and they
+          do not collect any of your personally identifiable data. In our case, we use a first-party cookie to remember your
+          selected theme choice (light or dark mode).</li>
+        <li><strong>Third-party cookies</strong> used on our website are mainly for understanding how the website performs,
+          how you interact with our website, keeping our services secure, and overall providing you with a better and improved
+          user experience.</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="list-circle-outline"></ion-icon> Types of Cookies We Use</h3>
+      <p>The cookies used on our website are grouped into the following categories:</p>
+      <ul>
+        <li><strong>Essential:</strong> Some cookies are essential for you to be able to experience the full functionality
+          of our site. They allow us to maintain user sessions and prevent any security threats. They do not collect or store
+          any personal information.</li>
+        <li><strong>Preferences:</strong> These cookies help us store your settings and browsing preferences like your theme
+          preference so that you have a better and efficient experience on future visits to the website.</li>
+        <li><strong>Analytics:</strong> These cookies store information like the number of visitors to the website, the number
+          of unique visitors, which pages of the website have been visited, the source of the visit, etc. This data helps us
+          understand and analyze how well the website performs.</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="options-outline"></ion-icon> Controlling Cookie Preferences</h3>
+      <p>
+        Should you decide to change your preferences later through your browsing session, you can click on the "Privacy &
+        Cookie Policy" tab on your screen. This will display the consent notice again enabling you to change your preferences
+        or withdraw your consent entirely.
+      </p>
+      <p>
+        In addition to this, different browsers provide different methods to block and delete cookies used by websites. You
+        can change the settings of your browser to block/delete the cookies. To find out more about how to manage and delete
+        cookies, visit <a href="https://allaboutcookies.org" target="_blank">allaboutcookies.org</a>.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="mail-outline"></ion-icon> Contact Us</h3>
+      <p>
+        If you have any questions about our Cookie Policy or our practices, please contact us at:
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact@tribletunes.com">contact@tribletunes.com</a>
+      </p>
+    </div>
+
+    <p class="section-text" style="text-align: center; margin-top: 30px;">
+      <strong>Last Updated:</strong> June 2026
+    </p>
+  </section>
+</Layout>

@@ -1,0 +1,228 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Terms of Service - TribleTunes"
+  description="TribleTunes Terms of Service - Read our rules, policies, and guidelines for using the TribleTunes music submission and video platform."
+  keywords="terms of service, terms and conditions, TribleTunes terms, user agreement, submission rules"
+>
+  <style slot="head">
+    /* INFO CARD */
+    .info-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: clamp(10px, 2vw, 15px);
+      padding: clamp(20px, 3vw, 30px);
+      margin: clamp(20px, 3vh, 30px) 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+
+    .info-card h3 {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: var(--accent-color);
+      margin-bottom: clamp(12px, 2vh, 15px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-card h3 ion-icon {
+      font-size: clamp(1.3rem, 3vw, 1.5rem);
+    }
+
+    .info-card p,
+    .info-card ul {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: clamp(10px, 2vh, 15px);
+    }
+
+    .info-card ul {
+      padding-left: clamp(20px, 4vw, 30px);
+    }
+
+    .info-card li {
+      margin-bottom: clamp(8px, 1.5vh, 10px);
+    }
+
+    /* FANCY HR LINES */
+    hr.fancy-line {
+      border: 0;
+      height: clamp(2px, 0.3vh, 3px);
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      margin: clamp(30px, 5vh, 50px) auto;
+      border-radius: 5px;
+      max-width: min(600px, 80%);
+      opacity: 0.6;
+    }
+  </style>
+
+  <!-- TERMS OF SERVICE SECTION -->
+  <section id="terms">
+    <h2 class="section-title">Terms of Service</h2>
+    <h3 class="section-subtitle">Agreement to Our Legal Terms</h3>
+
+    <p class="section-text">
+      Welcome to TribleTunes! By accessing or using our website at <a href="https://tribletunes.com">tribletunes.com</a>
+      and our services, you agree to be bound by these Terms of Service. Please read them carefully before using our
+      platform.
+    </p>
+
+    <hr class="fancy-line">
+
+    <div class="info-card">
+      <h3><ion-icon name="checkmark-circle-outline"></ion-icon> Acceptance of Terms</h3>
+      <p>
+        By accessing and using TribleTunes, you accept and agree to be bound by these Terms of Service and our Privacy
+        Policy. If you do not agree to these terms, please do not use our website or services.
+      </p>
+      <p>
+        We reserve the right to update, change, or replace any part of these Terms of Service by posting updates on this
+        page. It is your responsibility to check this page periodically for changes.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="globe-outline"></ion-icon> Use of Our Services</h3>
+      <p>
+        TribleTunes provides a platform for music lyric videos, artist promotion, and music discovery. You agree to use
+        our services only for lawful purposes and in accordance with these Terms.
+      </p>
+      <p><strong>You agree NOT to:</strong></p>
+      <ul>
+        <li>Upload, submit, or share content that infringes on intellectual property rights</li>
+        <li>Use our services for any illegal or unauthorized purpose</li>
+        <li>Attempt to interfere with the proper functioning of our website</li>
+        <li>Engage in any activity that could harm, disable, or impair our services</li>
+        <li>Use automated systems or software to extract data from our website</li>
+        <li>Impersonate any person or entity, or falsely state your affiliation</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="musical-notes-outline"></ion-icon> Content Submission</h3>
+      <p>
+        When you submit music, lyrics, or other content to TribleTunes, you represent and warrant that:
+      </p>
+      <ul>
+        <li>You own or have the necessary rights, licenses, and permissions to share the content</li>
+        <li>Your content does not violate any third-party rights, including copyright, trademark, or privacy rights</li>
+        <li>Your content does not contain any viruses, malware, or harmful code</li>
+        <li>Your content complies with all applicable laws and regulations</li>
+      </ul>
+      <p>
+        By submitting content, you grant TribleTunes a non-exclusive, worldwide, royalty-free license to use, reproduce,
+        modify, adapt, publish, and display your content on our platform and promotional materials.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="shield-checkmark-outline"></ion-icon> Intellectual Property</h3>
+      <p>
+        All content on TribleTunes, including but not limited to text, graphics, logos, images, videos, and software, is
+        the property of TribleTunes or its content suppliers and is protected by copyright, trademark, and other
+        intellectual property laws.
+      </p>
+      <p>
+        You may not reproduce, distribute, modify, create derivative works, publicly display, or exploit any content
+        from our website without our express written permission.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="alert-circle-outline"></ion-icon> Disclaimer of Warranties</h3>
+      <p>
+        TribleTunes is provided on an "AS IS" and "AS AVAILABLE" basis without any warranties of any kind, either
+        express or implied. We do not warrant that:
+      </p>
+      <ul>
+        <li>The service will be uninterrupted, timely, secure, or error-free</li>
+        <li>The results obtained from using the service will be accurate or reliable</li>
+        <li>The quality of any products, services, or content available through our service will meet your expectations
+        </li>
+        <li>Any errors in the software or content will be corrected</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="warning-outline"></ion-icon> Limitation of Liability</h3>
+      <p>
+        To the maximum extent permitted by law, TribleTunes shall not be liable for any indirect, incidental, special,
+        consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly,
+        or any loss of data, use, goodwill, or other intangible losses resulting from:
+      </p>
+      <ul>
+        <li>Your access to or use of (or inability to access or use) our services</li>
+        <li>Any conduct or content of any third party on our services</li>
+        <li>Any content obtained from our services</li>
+        <li>Unauthorized access, use, or alteration of your content or submissions</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="people-outline"></ion-icon> User Accounts</h3>
+      <p>
+        If you create an account with us, you are responsible for:
+      </p>
+      <ul>
+        <li>Maintaining the confidentiality of your account credentials</li>
+        <li>All activities that occur under your account</li>
+        <li>Notifying us immediately of any unauthorized use of your account</li>
+      </ul>
+      <p>
+        We reserve the right to suspend or terminate your account if you violate these Terms of Service or engage in
+        activities that harm TribleTunes or other users.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="link-outline"></ion-icon> Third-Party Links</h3>
+      <p>
+        Our website may contain links to third-party websites, including YouTube, Spotify, SoundCloud, and social media
+        platforms. We are not responsible for the content, privacy policies, or practices of any third-party sites.
+      </p>
+      <p>
+        Your use of third-party websites is at your own risk and subject to their terms and conditions.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="close-circle-outline"></ion-icon> Termination</h3>
+      <p>
+        We may terminate or suspend your access to our services immediately, without prior notice or liability, for any
+        reason, including but not limited to a breach of these Terms.
+      </p>
+      <p>
+        Upon termination, your right to use the service will immediately cease. All provisions of these Terms which by
+        their nature should survive termination shall survive, including ownership provisions, warranty disclaimers, and
+        limitations of liability.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="scale-outline"></ion-icon> Governing Law</h3>
+      <p>
+        These Terms shall be governed and construed in accordance with applicable laws, without regard to its conflict
+        of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver
+        of those rights.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="mail-outline"></ion-icon> Contact Information</h3>
+      <p>
+        If you have any questions about these Terms of Service, please contact us at:
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact@tribletunes.com">contact@tribletunes.com</a>
+      </p>
+    </div>
+
+    <p class="section-text" style="text-align: center; margin-top: 30px;">
+      <strong>Last Updated:</strong> January 2025
+    </p>
+  </section>
+</Layout>

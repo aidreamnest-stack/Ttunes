@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Us - TribleTunes"
+  description="Contact TribleTunes - Get in touch with us for collaborations, business inquiries, questions, or feedback. We would love to hear from you!"
+  keywords="contact TribleTunes, music contact, reach out, collaboration, feedback, music business"
+>
+  <style slot="head">
+    /* FORM CARD */
+    .form-card {
+      background: var(--bg-card);
+      padding: clamp(20px, 4vw, 35px);
+      border-radius: clamp(10px, 2vw, 20px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      margin: clamp(20px, 3vh, 30px) auto;
+      max-width: 600px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      margin-bottom: clamp(12px, 2vh, 18px);
+      border-radius: clamp(8px, 1.5vw, 12px);
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      outline: none;
+      padding: clamp(12px, 2vh, 16px) clamp(14px, 2.5vw, 18px);
+      border: 2px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      transition: var(--transition);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    }
+
+    form textarea {
+      min-height: clamp(120px, 20vh, 150px);
+      resize: vertical;
+    }
+
+    form button {
+      width: 100%;
+      padding: clamp(12px, 2.5vh, 16px);
+      font-weight: 600;
+      border: none;
+      border-radius: clamp(25px, 5vw, 50px);
+      background: linear-gradient(135deg, var(--accent-color), #ec4899);
+      color: white;
+      cursor: pointer;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      transition: var(--transition);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+      min-height: 44px;
+    }
+
+    form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+    }
+
+    form button:active {
+      transform: translateY(0);
+    }
+
+    /* SOCIAL ICONS */
+    .social-section {
+      margin-top: clamp(40px, 6vh, 60px);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: clamp(20px, 4vw, 30px);
+      margin-top: clamp(25px, 4vh, 35px);
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(55px, 10vw, 70px);
+      height: clamp(55px, 10vw, 70px);
+      background: var(--bg-card);
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .social-icons img {
+      width: clamp(28px, 5vw, 36px);
+      height: clamp(28px, 5vw, 36px);
+      transition: var(--transition);
+    }
+
+    .social-icons a.youtube:hover {
+      border-color: #FF0000;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+      transform: translateY(-5px);
+    }
+
+    .social-icons a.instagram:hover {
+      border-color: #E1306C;
+      box-shadow: 0 0 20px rgba(225, 48, 108, 0.5);
+      transform: translateY(-5px);
+    }
+
+    .social-icons a.facebook:hover {
+      border-color: #1877F2;
+      box-shadow: 0 0 20px rgba(24, 119, 242, 0.5);
+      transform: translateY(-5px);
+    }
+
+    .social-icons a.x:hover {
+      border-color: #000000;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .social-icons a.whatsapp:hover {
+      border-color: #25D366;
+      box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+      transform: translateY(-5px);
+    }
+
+    .social-icons a.email:hover {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+      transform: translateY(-5px);
+    }
+
+    @media(hover: none) and (pointer: coarse) {
+      form button:hover,
+      .social-icons a:hover {
+        transform: none;
+      }
+      form button:active {
+        transform: scale(0.98);
+      }
+    }
+  </style>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <h3 class="section-subtitle">We'd Love to Hear From You!</h3>
+    <p class="section-text">
+      Have questions, suggestions, or want to collaborate? Whether you're an artist, music lover, or potential partner,
+      we're here to connect. Reach out via the form below or through our social channels!
+    </p>
+
+    <div class="form-card">
+      <form action="https://formspree.io/f/xzzjejde" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <hr class="fancy-line">
+
+    <div class="social-section">
+      <h3 class="section-subtitle">Connect With Us</h3>
+      <p class="section-text">Follow us on social media for the latest updates, releases, and behind-the-scenes content!
+      </p>
+
+      <div class="social-icons">
+        <a class="youtube" href="https://www.youtube.com/@TribleTunes" target="_blank" title="YouTube">
+          <img src="https://ik.imagekit.io/h2tos5anh/youtube-logo-2431.png?updatedAt=1759562863816" alt="YouTube">
+        </a>
+        <a class="instagram" href="https://instagram.com/TribleTune" target="_blank" title="Instagram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a class="facebook" href="https://facebook.com/TribleTunes" target="_blank" title="Facebook">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+        </a>
+        <a class="x" href="https://x.com/TribleTunes" target="_blank" title="X (Twitter)">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X">
+        </a>
+        <a class="whatsapp" href="https://whatsapp.com/channel/0029Vb6g16B8kyyWIkgqcq3l" target="_blank"
+          title="WhatsApp">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a class="email" href="mailto:contact@tribletunes.com" title="Email">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

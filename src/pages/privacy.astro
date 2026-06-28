@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Privacy Policy - TribleTunes"
+  description="TribleTunes Privacy Policy - Learn how we collect, use, store, and protect your personal information on our platform."
+  keywords="privacy policy, data protection, TribleTunes privacy, user information, user rights"
+>
+  <style slot="head">
+    /* INFO CARD */
+    .info-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: clamp(10px, 2vw, 15px);
+      padding: clamp(20px, 3vw, 30px);
+      margin: clamp(20px, 3vh, 30px) 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+
+    .info-card h3 {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: var(--accent-color);
+      margin-bottom: clamp(12px, 2vh, 15px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-card h3 ion-icon {
+      font-size: clamp(1.3rem, 3vw, 1.5rem);
+    }
+
+    .info-card p,
+    .info-card ul {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: clamp(10px, 2vh, 15px);
+    }
+
+    .info-card ul {
+      padding-left: clamp(20px, 4vw, 30px);
+    }
+
+    .info-card li {
+      margin-bottom: clamp(8px, 1.5vh, 10px);
+    }
+
+    /* FANCY HR LINES */
+    hr.fancy-line {
+      border: 0;
+      height: clamp(2px, 0.3vh, 3px);
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      margin: clamp(30px, 5vh, 50px) auto;
+      border-radius: 5px;
+      max-width: min(600px, 80%);
+      opacity: 0.6;
+    }
+  </style>
+
+  <!-- PRIVACY POLICY SECTION -->
+  <section id="privacy-policy">
+    <h2 class="section-title">Privacy Policy</h2>
+    <h3 class="section-subtitle">Your Privacy Matters to Us</h3>
+
+    <p class="section-text">
+      At TribleTunes, accessible from <a href="https://tribletunes.com">tribletunes.com</a>, one of our main priorities
+      is the privacy of our visitors and contributors. This Privacy Policy document contains types of information that
+      are collected and recorded by TribleTunes and how we use it.
+    </p>
+
+    <hr class="fancy-line">
+
+    <div class="info-card">
+      <h3><ion-icon name="information-circle-outline"></ion-icon> Information We Collect</h3>
+      <p>
+        We may collect personal information such as your name, email address, and any other details you voluntarily
+        provide when you contact us, submit music, or subscribe to updates. We also collect basic analytics data such
+        as:
+      </p>
+      <ul>
+        <li>IP address</li>
+        <li>Browser type and version</li>
+        <li>Device information</li>
+        <li>Pages visited and time spent</li>
+        <li>Referring website addresses</li>
+      </ul>
+      <p>This data helps us improve user experience and optimize our platform.</p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="apps-outline"></ion-icon> How We Use Your Information</h3>
+      <p>We use collected information to:</p>
+      <ul>
+        <li>Respond to your messages or inquiries</li>
+        <li>Feature your submissions and music content (if applicable)</li>
+        <li>Improve site performance and user experience</li>
+        <li>Send updates related to TribleTunes (only if you opt-in)</li>
+        <li>Analyze website traffic and user behavior</li>
+        <li>Prevent fraud and ensure platform security</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="git-network-outline"></ion-icon> Cookies</h3>
+      <p>
+        Like many other websites, TribleTunes uses 'cookies' to store information such as visitors' preferences and
+        pages visited. This information helps us customize web content for a better user experience.
+      </p>
+      <p>
+        You can choose to disable cookies through your browser settings. However, this may affect your ability to use
+        certain features of our website.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="link-outline"></ion-icon> Third-Party Links</h3>
+      <p>
+        Our website may contain links to external platforms such as YouTube, Spotify, SoundCloud, or artist pages. These
+        sites are not operated by TribleTunes, and we are not responsible for their content or privacy policies.
+      </p>
+      <p>
+        We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume
+        no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="shield-checkmark-outline"></ion-icon> Data Security</h3>
+      <p>
+        We take reasonable precautions to protect your personal information. However, no method of transmission over the
+        Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect
+        your personal data, we cannot guarantee its absolute security.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="people-outline"></ion-icon> Children's Privacy</h3>
+      <p>
+        TribleTunes does not knowingly collect personally identifiable information from children under the age of 13. If
+        you are a parent or guardian and believe your child has provided us with personal information, please contact us
+        immediately.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="checkmark-circle-outline"></ion-icon> Consent</h3>
+      <p>
+        By using our website, you hereby consent to our Privacy Policy and agree to its terms. If you do not agree with
+        this policy, please do not use our website.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="refresh-outline"></ion-icon> Changes to This Policy</h3>
+      <p>
+        We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy
+        Policy on this page and updating the "Last Updated" date below.
+      </p>
+      <p>
+        You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are
+        effective when they are posted on this page.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="mail-outline"></ion-icon> Contact Us</h3>
+      <p>
+        For questions or concerns about this Privacy Policy, please contact us at:
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact@tribletunes.com">contact@tribletunes.com</a>
+      </p>
+    </div>
+
+    <p class="section-text" style="text-align: center; margin-top: 30px;">
+      <strong>Last Updated:</strong> January 2025
+    </p>
+  </section>
+</Layout>

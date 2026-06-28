@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="TribleTunes - Artist, Lyrics Videos & Amazing Music Content"
+  description="TribleTunes creates high-quality lyric videos, curated playlists, and daily music uploads. Lose yourself in emotional and aesthetic music visuals."
+  keywords="TribleTunes, lyric videos, music channel, aesthetic lyrics, chill music, emotional songs, youtube music, lo-fi lyrics, upcoming artists, music submissions"
+>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">Lose yourself in</h2>
+    <h3 class="section-subtitle">the Place of amazing music.</h3>
+    <p class="section-text">
+      TribleTunes is a space where music and imagination soar together. We create and share high-quality lyric videos,
+      bringing your favorite songs to life with vibrant visuals. From daily releases to curated playlists, our goal is
+      to lift every listener into a world of amazing melodies and unforgettable rhythms.
+      🎵 TribleTunes: Lose yourself in the music! 🎵 </p>
+    <button class="cta-btn" onclick="window.open('https://www.youtube.com/@Tribletunes', '_blank')">Be The Part Of
+      Community</button>
+  </section>
+
+  <!-- RELEASES -->
+  <section id="releases">
+    <h2 class="section-title">Featured Releases</h2>
+    <div class="carousel">
+      <div class="carousel-track" id="release-track"></div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE -->
+  <section id="youtube">
+    <h2 class="section-title">Latest Uploads</h2>
+    <div class="youtube-carousel">
+      <div class="youtube-track" id="youtube-track"></div>
+    </div>
+    <p class="swipe-text">⟷ Youtube Video</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2 class="section-title">Have questions?</h2>
+    <h3 class="section-subtitle">We've got answers.</h3>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What is TribleTunes? <span class="arrow-icon">▼</span>
+      </button>
+      <div class="faq-answer">
+        TribleTunes is a music and lyric video channel focused on delivering emotional, aesthetic, and impactful music
+        visuals.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How often are new videos released? <span class="arrow-icon">▼</span>
+      </button>
+      <div class="faq-answer">
+        New lyric videos, playlists, and music features are uploaded daily.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Can I request a song? <span class="arrow-icon">▼</span>
+      </button>
+      <div class="faq-answer">
+        Yes! You can request songs through our <a href="/submission/">Submission Page</a> or contact form.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Are all videos official? <span class="arrow-icon">▼</span>
+      </button>
+      <div class="faq-answer">
+        We work with artists and copyright licensing to ensure our lyric videos are created respectfully and
+        legitimately.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How can I support TribleTunes? <span class="arrow-icon">▼</span>
+      </button>
+      <div class="faq-answer">
+        Support us by subscribing, engaging with our uploads, requesting songs, and sharing our videos with friends.
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <h2 class="section-title">Stay updated</h2>
+    <h3 class="section-subtitle">with our newsletter & suggestions.</h3>
+    <form action="https://formspree.io/f/xzzjejde" method="POST">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message (optional)"></textarea>
+      <button type="submit" class="cta-btn">Subscribe & Send</button>
+    </form>
+  </section>
+</Layout>

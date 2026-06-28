@@ -1,0 +1,284 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Submit Your Track - TribleTunes"
+  description="Submit your track to TribleTunes for free professional lyric video creation. Promote your music to our active global audience."
+  keywords="music submission, lyric video, music promotion, submit track, TribleTunes, free music video, release music"
+>
+  <style slot="head">
+    /* FORM CARD */
+    .form-card {
+      background: var(--bg-card);
+      padding: clamp(20px, 4vw, 35px);
+      border-radius: clamp(10px, 2vw, 20px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      margin-top: clamp(20px, 3vh, 30px);
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      margin-bottom: clamp(12px, 2vh, 18px);
+      border-radius: clamp(8px, 1.5vw, 12px);
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      outline: none;
+      padding: clamp(12px, 2vh, 16px) clamp(14px, 2.5vw, 18px);
+      border: 2px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      transition: var(--transition);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    }
+
+    form textarea {
+      min-height: clamp(140px, 25vh, 180px);
+      resize: vertical;
+    }
+
+    .input-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .input-wrapper input {
+      padding-left: clamp(40px, 8vw, 50px);
+    }
+
+    .input-icon {
+      position: absolute;
+      left: clamp(12px, 2vw, 16px);
+      top: 50%;
+      transform: translateY(-50%);
+      width: clamp(18px, 3vw, 22px);
+      height: clamp(18px, 3vw, 22px);
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    form button {
+      width: 100%;
+      padding: clamp(12px, 2.5vh, 16px);
+      font-weight: 600;
+      border: none;
+      border-radius: clamp(25px, 5vw, 50px);
+      background: linear-gradient(135deg, var(--accent-color), #ec4899);
+      color: white;
+      cursor: pointer;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      transition: var(--transition);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+    }
+
+    form button:active {
+      transform: translateY(0);
+    }
+
+    /* FEATURES LIST */
+    .features-list {
+      list-style: none;
+      margin: clamp(20px, 3vh, 30px) 0;
+    }
+
+    .features-list li {
+      padding: clamp(12px, 2vh, 16px) clamp(15px, 3vw, 20px);
+      margin-bottom: clamp(10px, 2vh, 14px);
+      background: var(--bg-card);
+      border-radius: clamp(8px, 1.5vw, 12px);
+      border-left: 4px solid var(--accent-color);
+      color: var(--text-primary);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: clamp(10px, 2vw, 14px);
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .features-list li:hover {
+      transform: translateX(8px);
+      background: var(--bg-secondary);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+    }
+
+    .features-list li ion-icon {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      color: var(--accent-color);
+      flex-shrink: 0;
+    }
+
+    /* CTA CARD */
+    .cta-card {
+      background: linear-gradient(135deg, var(--accent-color), #ec4899);
+      padding: clamp(20px, 4vw, 35px);
+      border-radius: clamp(12px, 2vw, 20px);
+      margin: clamp(25px, 4vh, 40px) 0;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+      transition: var(--transition);
+    }
+
+    .cta-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(99, 102, 241, 0.6);
+    }
+
+    .cta-card a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .cta-card ion-icon {
+      font-size: clamp(1.3rem, 3vw, 1.6rem);
+    }
+
+    /* UNDER DEVELOPMENT CARD */
+    .under-dev-card {
+      background: var(--bg-card);
+      border: 2px dashed var(--border-color);
+      padding: clamp(20px, 4vw, 30px);
+      border-radius: clamp(12px, 2vw, 20px);
+      margin: clamp(25px, 4vh, 40px) 0;
+      text-align: center;
+    }
+
+    .under-dev-card span {
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .under-dev-card ion-icon {
+      font-size: clamp(1.3rem, 3vw, 1.5rem);
+      color: var(--accent-color);
+    }
+
+    @media(hover: none) and (pointer: coarse) {
+      .cta-card:hover {
+        transform: none;
+      }
+      form button:active,
+      .cta-card:active {
+        transform: scale(0.98);
+      }
+    }
+  </style>
+
+  <!-- FREE SUBMISSION SECTION -->
+  <section id="free-submission">
+    <h2 class="section-title">Submit Your Track</h2>
+    <h3 class="section-subtitle">Get Your Lyric Video Created for Free</h3>
+    <p class="section-text">
+      Share your music with the world! Submit your track via Spotify or SoundCloud link for professional lyric video
+      creation. Only tracks intended for lyric videos are accepted.
+    </p>
+    <p class="section-text">
+      Fill out the form below with your track details. We'll review your submission and create a stunning lyric video to
+      showcase your music on our YouTube channel.
+    </p>
+
+    <div class="form-card">
+      <form action="https://formspree.io/f/xzzjejde" method="POST">
+        <input type="text" name="name" placeholder="Artist Name" required>
+        <input type="text" name="social" placeholder="Social Media URL (Instagram, Twitter, etc.)" required>
+        <input type="text" name="track" placeholder="Track Title" required>
+        <textarea name="lyrics" placeholder="Song Lyrics (Full lyrics required)" required></textarea>
+
+        <div class="input-wrapper">
+          <input type="url" name="tracklink" placeholder="Spotify / SoundCloud Track Link" required>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify"
+            class="input-icon">
+        </div>
+
+        <button type="submit">
+          <ion-icon name="send-outline"></ion-icon>
+          Submit Track
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <hr class="fancy-line">
+
+  <!-- PAID PROMOTION SECTION -->
+  <section id="paid-promotion">
+    <h2 class="section-title">Paid Promotion</h2>
+    <h3 class="section-subtitle">Boost Your Reach with Professional Marketing</h3>
+    <p class="section-text">
+      Want to reach thousands of music lovers? Our paid promotion service features your lyric video with YouTube ads,
+      playlist features, and targeted social media campaigns.
+    </p>
+    <p class="section-text">
+      Get priority video creation, guaranteed exposure, and detailed analytics to track your growing audience. Let's
+      make your music heard worldwide!
+    </p>
+
+    <ul class="features-list">
+      <li><ion-icon name="flash-outline"></ion-icon> Priority lyric video creation</li>
+      <li><ion-icon name="megaphone-outline"></ion-icon> YouTube & social media advertising</li>
+      <li><ion-icon name="musical-notes-outline"></ion-icon> Featured in TribleTunes playlists</li>
+      <li><ion-icon name="trending-up-outline"></ion-icon> Guaranteed wider audience reach</li>
+      <li><ion-icon name="analytics-outline"></ion-icon> Detailed performance analytics report</li>
+    </ul>
+
+    <div class="cta-card">
+      <a href="https://app.one-submit.com/direct-submit/27237/2377/5549/TribleTunes-youtube-Music-Promotion"
+        target="_blank">
+        <ion-icon name="rocket-outline"></ion-icon>
+        Start Paid Promotion Now
+      </a>
+    </div>
+  </section>
+
+  <hr class="fancy-line">
+
+  <!-- OFFICIAL RELEASE SECTION -->
+  <section id="official-release">
+    <h2 class="section-title">Official Track Release</h2>
+    <h3 class="section-subtitle">Coming Soon to All Major Platforms</h3>
+    <p class="section-text">
+      We're building something incredible! Soon you'll be able to officially release your tracks through TribleTunes to
+      all major streaming platforms including Spotify, Apple Music, Amazon Music, and more.
+    </p>
+    <p class="section-text">
+      This feature will include professional distribution, playlist pitching, and comprehensive release management. Stay
+      tuned for updates!
+    </p>
+
+    <div class="under-dev-card">
+      <span>
+        <ion-icon name="construct-outline"></ion-icon>
+        Under Development - Coming Soon!
+      </span>
+    </div>
+  </section>
+</Layout>

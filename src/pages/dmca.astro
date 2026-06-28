@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="DMCA Policy - TribleTunes"
+  description="TribleTunes DMCA Policy - Information on intellectual property respect, counter-notifications, and filing a copyright infringement claim."
+  keywords="DMCA policy, copyright infringement, music copyright, TribleTunes DMCA, report copyright"
+>
+  <style slot="head">
+    /* INFO CARD */
+    .info-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: clamp(10px, 2vw, 15px);
+      padding: clamp(20px, 3vw, 30px);
+      margin: clamp(20px, 3vh, 30px) 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+
+    .info-card h3 {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: var(--accent-color);
+      margin-bottom: clamp(12px, 2vh, 15px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-card h3 ion-icon {
+      font-size: clamp(1.3rem, 3vw, 1.5rem);
+    }
+
+    .info-card p,
+    .info-card ul {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: clamp(10px, 2vh, 15px);
+    }
+
+    .info-card ul {
+      padding-left: clamp(20px, 4vw, 30px);
+    }
+
+    .info-card li {
+      margin-bottom: clamp(8px, 1.5vh, 10px);
+    }
+
+    .info-card strong {
+      color: var(--text-primary);
+    }
+
+    /* CONTACT INFO BOX */
+    .contact-box {
+      background: linear-gradient(135deg, var(--accent-color), #ec4899);
+      padding: clamp(20px, 3vw, 30px);
+      border-radius: clamp(12px, 2vw, 20px);
+      margin: clamp(25px, 4vh, 40px) 0;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+    }
+
+    .contact-box h3 {
+      color: white;
+      font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+      margin-bottom: clamp(12px, 2vh, 15px);
+    }
+
+    .contact-box p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      margin-bottom: clamp(15px, 2.5vh, 20px);
+    }
+
+    .contact-box a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: clamp(10px, 2vh, 12px) clamp(20px, 3vw, 28px);
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: clamp(20px, 4vw, 30px);
+      display: inline-block;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-box a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* FANCY HR LINES */
+    hr.fancy-line {
+      border: 0;
+      height: clamp(2px, 0.3vh, 3px);
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      margin: clamp(30px, 5vh, 50px) auto;
+      border-radius: 5px;
+      max-width: min(600px, 80%);
+      opacity: 0.6;
+    }
+  </style>
+
+  <!-- DMCA SECTION -->
+  <section id="dmca">
+    <h2 class="section-title">DMCA Policy</h2>
+    <h3 class="section-subtitle">Digital Millennium Copyright Act</h3>
+
+    <p class="section-text">
+      TribleTunes respects the intellectual property rights of others and expects our users to do the same. In
+      accordance with the Digital Millennium Copyright Act (DMCA), we will respond promptly to claims of copyright
+      infringement committed using our platform.
+    </p>
+
+    <hr class="fancy-line">
+
+    <div class="info-card">
+      <h3><ion-icon name="shield-checkmark-outline"></ion-icon> Copyright Respect</h3>
+      <p>
+        We take copyright infringement seriously. All content on TribleTunes is created with proper permissions and
+        licenses from artists and rights holders. If you believe any content on our platform infringes your copyright,
+        please follow the procedure outlined below.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="document-text-outline"></ion-icon> Filing a DMCA Notice</h3>
+      <p>
+        If you are a copyright owner (or authorized to act on behalf of one) and believe that content on TribleTunes
+        infringes your copyright, please submit a written notice with the following information:
+      </p>
+      <ul>
+        <li><strong>Identification of the copyrighted work:</strong> A description of the copyrighted work that you
+          claim has been infringed.</li>
+        <li><strong>Identification of the infringing material:</strong> The URL or specific location on our platform
+          where the allegedly infringing material is located.</li>
+        <li><strong>Your contact information:</strong> Your name, address, telephone number, and email address.</li>
+        <li><strong>Statement of good faith:</strong> A statement that you have a good faith belief that the disputed
+          use is not authorized by the copyright owner, its agent, or the law.</li>
+        <li><strong>Statement of accuracy:</strong> A statement, under penalty of perjury, that the information in your
+          notice is accurate and that you are the copyright owner or authorized to act on their behalf.</li>
+        <li><strong>Your signature:</strong> A physical or electronic signature of the copyright owner or a person
+          authorized to act on their behalf.</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="checkmark-circle-outline"></ion-icon> Counter-Notification</h3>
+      <p>
+        If you believe that material you posted was removed or access to it was disabled by mistake or
+        misidentification, you may file a counter-notification. Your counter-notification must include:
+      </p>
+      <ul>
+        <li>Identification of the material that has been removed or disabled.</li>
+        <li>Your name, address, telephone number, and email address.</li>
+        <li>A statement under penalty of perjury that you have a good faith belief that the material was removed or
+          disabled as a result of mistake or misidentification.</li>
+        <li>A statement that you consent to the jurisdiction of the Federal District Court for the judicial district in
+          which your address is located.</li>
+        <li>Your physical or electronic signature.</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="time-outline"></ion-icon> Response Time</h3>
+      <p>
+        Upon receipt of a valid DMCA notice, we will take the following actions:
+      </p>
+      <ul>
+        <li>Remove or disable access to the allegedly infringing material.</li>
+        <li>Notify the user who posted the material that it has been removed or disabled.</li>
+        <li>Investigate the claim and take appropriate action, which may include termination of repeat infringers'
+          accounts.</li>
+      </ul>
+      <p>
+        We aim to respond to all valid DMCA notices within 48-72 hours.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3><ion-icon name="warning-outline"></ion-icon> Repeat Infringers</h3>
+      <p>
+        TribleTunes maintains a policy of terminating, in appropriate circumstances, accounts of users who are repeat
+        infringers. We reserve the right to terminate access to the platform for any user who repeatedly infringes the
+        copyrights of others.
+      </p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Send Your DMCA Notice</h3>
+      <p>
+        Please send all DMCA notices and counter-notifications to our designated copyright agent via email:
+      </p>
+      <a href="mailto:contact@tribletunes.com">dmca@tribletunes.com</a>
+    </div>
+
+    <p class="section-text" style="text-align: center; margin-top: 30px;">
+      <strong>Last Updated:</strong> January 2025
+    </p>
+  </section>
+</Layout>

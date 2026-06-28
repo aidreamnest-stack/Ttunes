@@ -1,0 +1,140 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  keywords: string;
+}
+
+const { title, description, keywords } = Astro.props;
+
+// Dynamically generate the canonical URL based on the current page path
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script is:inline>
+    (function () {
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content={description}>
+  <meta name="keywords" content={keywords}>
+  <meta name="author" content="TribleTunes">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href={canonicalURL}>
+
+  <!-- Hreflang Localization -->
+  <link rel="alternate" hreflang="x-default" href={canonicalURL}>
+  <link rel="alternate" hreflang="en" href={canonicalURL}>
+
+  <!-- Geo SEO (Geotagging) -->
+  <meta name="geo.region" content="IN-DL" />
+  <meta name="geo.placename" content="New Delhi" />
+  <meta name="geo.position" content="28.6139;77.2090" />
+  <meta name="ICBM" content="28.6139, 77.2090" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content="https://ik.imagekit.io/lbmgfujrk/preview.png">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TribleTunes">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content="https://ik.imagekit.io/lbmgfujrk/preview.png">
+  <meta name="twitter:site" content="@TribleTunes">
+
+  <!-- Favicon and Theme Color -->
+  <link rel="icon" href="https://ik.imagekit.io/lbmgfujrk/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://ik.imagekit.io/lbmgfujrk/favicon.png">
+  <meta name="theme-color" content="#6366f1">
+
+  <!-- Fonts & Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <script is:inline src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+  <script is:inline src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" nomodule></script>
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="/assets/style.css?v=2">
+
+  <!-- Custom page-specific head slot -->
+  <slot name="head" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
+        <ion-icon name="moon-outline" id="themeIcon"></ion-icon>
+      </div>
+      <div class="header-logo">
+        <h1 class="logo" onclick="window.location.href='/'">TribleTunes</h1>
+      </div>
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERLAY -->
+  <div id="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <nav id="sidebar">
+    <a href="/"><ion-icon name="home-outline"></ion-icon> Home</a>
+    <a href="/about/"><ion-icon name="information-circle-outline"></ion-icon> About Us</a>
+    <a href="/contact/"><ion-icon name="mail-outline"></ion-icon> Contact</a>
+    <a href="/submission/"><ion-icon name="cloud-upload-outline"></ion-icon> Submission</a>
+    <a href="/privacy/"><ion-icon name="shield-checkmark-outline"></ion-icon> Privacy Policy</a>
+    <a href="/terms/"><ion-icon name="document-text-outline"></ion-icon> Terms of Service</a>
+    <a href="/dmca/"><ion-icon name="alert-circle-outline"></ion-icon> DMCA</a>
+  </nav>
+
+  <!-- MAIN PAGE CONTENT -->
+  <slot />
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 TribleTunes. All rights reserved.</p>
+    <p>
+      <a href="/">Home</a> |
+      <a href="/about/">About Us</a> |
+      <a href="/contact/">Contact</a> |
+      <a href="/submission/">Submission</a> |
+      <a href="/privacy/">Privacy Policy</a> |
+      <a href="/terms/">Terms of Service</a> |
+      <a href="/dmca/">DMCA</a> |
+      <a href="/cookies/">Cookie Policy</a>
+    </p>
+    <p style="margin-top: 15px; font-size: clamp(0.75rem, 1.5vw, 0.85rem);">Made with ❤️ for Music Lovers</p>
+  </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollTop" title="Scroll to top">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </button>
+
+  <!-- Global Script -->
+  <script is:inline src="/assets/script.js?v=2"></script>
+</body>
+
+</html>
